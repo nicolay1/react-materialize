@@ -11,6 +11,7 @@
   "scripts": {
     "test": "mocha",
     "test:watch": "mocha --watch",
+    "postpack": "npm run build",
     "pretest": "npm run lint",
     "build": "npm test && babel -d lib src",
     "lint": "eslint src test; exit 0",
