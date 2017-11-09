@@ -93,6 +93,7 @@ class Autocomplete extends Component {
       minLength,
       placeholder,
       limit,
+      id,
       // these are mentioned here only to prevent from getting into ...props
       value,
       onChange,
@@ -100,7 +101,7 @@ class Autocomplete extends Component {
       ...props
     } = this.props;
 
-    const _id = 'autocomplete-input';
+    const _id = (id !== undefined) ? id : 'autocomplete-input';
     const sizes = { s, m, l };
     let classes = {
       col: true
@@ -120,6 +121,7 @@ class Autocomplete extends Component {
           onChange={this._onChange}
           type='text'
           value={this.state.value}
+          autoComplete='off'
         />
         <label htmlFor={_id}>{title}</label>
         {this.renderDropdown(data, minLength, limit)}
