@@ -159,6 +159,10 @@ Autocomplete.propTypes = {
    * */
   limit: PropTypes.number,
   /**
+   * The id of the component. Default: autocomplete-input
+   * */
+  id: PropTypes.number,
+  /**
    * Placeholder for input element
    * */
   placeholder: PropTypes.string,
